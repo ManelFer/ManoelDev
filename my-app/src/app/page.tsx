@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code, Database, Globe, Smartphone, Mail, Phone, MapPin, Linkedin, Github, ArrowRight } from 'lucide-react';
+import { Menu, X, Code, Database, Globe, Smartphone, Phone, MapPin, Linkedin,  ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import foto1 from '../../public/bg_home.jpeg';
 
