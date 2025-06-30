@@ -148,11 +148,15 @@ function App() {
               <h2 className="text-4xl font-bold mb-8 text-[#191F25]">Quem sou eu?</h2>
               <p className="text-lg text-[#5b5d62] mb-6 leading-relaxed">
                 Olá me chamo Manoel Ferreira Matos, sou especialista em desenvolvimento de sistema e análise de sistemas. Gosto muito de motos clássicas e jogar.
+                <br />
+                
               </p>
-              <button className="inline-flex items-center px-6 py-3 bg-[#191F25] text-[#f0e9e6] rounded-md hover:bg-[#272E36] transition-colors">
+              <a href="https://github.com/ManelFer">
+                <button className="inline-flex items-center px-6 py-3 bg-[#191F25] text-[#f0e9e6] rounded-md hover:bg-[#272E36] transition-colors">
                 Saiba mais
                 <ArrowRight className="ml-2" size={18} />
               </button>
+              </a>
             </div>
             <div className="flex justify-center">
               <div className="w-80 h-80 bg-[#B1b2b9] rounded-full flex items-center justify-center shadow-2xl">
@@ -180,7 +184,7 @@ function App() {
               {
                 icon: <Database size={48} />,
                 title: "Banco de Dados",
-                description: "Design e otimização de bancos de dados relacionais e NoSQL"
+                description: "Design e otimização de bancos de dados relacionais"
               },
               {
                 icon: <Globe size={48} />,
@@ -211,10 +215,12 @@ function App() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="inline-flex items-center px-8 py-3 bg-[#191F25] text-[#f0e9e6] rounded-md hover:bg-[#272E36] transition-colors">
-              Ver todos os serviços
-              <ArrowRight className="ml-2" size={20} />
-            </button>
+            <a href="https://github.com/ManelFer">
+              <button className="inline-flex items-center px-8 py-3 bg-[#191F25] text-[#f0e9e6] rounded-md hover:bg-[#272E36] transition-colors">
+                Ver todos os serviços
+                <ArrowRight className="ml-2" size={20} />
+              </button>
+            </a>
           </div>
         </div>
       </section>
