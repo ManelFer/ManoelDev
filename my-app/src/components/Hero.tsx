@@ -13,13 +13,13 @@ export function Hero({ scrollToSection }: HeroProps) {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
         <Image
-          src={foto1}
+          src='/bg_home.jpeg'
           alt="Background"
           layout="fill"
           objectFit="cover"
           className="absolute inset-0"
         />
-        <div className="absolute inset-0 bg-[#191F25] bg-opacity-75"></div>
+        <div className="absolute inset-0 bg-[#191F25] opacity-75"></div>
       </div>
 
       <div className="relative z-10 text-center text-[#f0e9e6] px-4">
@@ -27,7 +27,7 @@ export function Hero({ scrollToSection }: HeroProps) {
           Manoel F. Matos
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-[#B1b2b9]">
-          Desenvolvedor de sistema | Arquiteto de sistemas
+          Desenvolvedor de sistema web | mobile
         </p>
         <Button onClick={() => scrollToSection('sobre')}>
           Conhecer mais
