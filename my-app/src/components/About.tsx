@@ -1,7 +1,7 @@
 import React from 'react';
 // Update the import path below to the correct location of your icon components.
 // For example, if your icons are in 'src/components/icons', use './icons' instead of '../icons'.
-import {ArrowRight } from './icons';
+import { ArrowRight } from './icons';
 import Image from 'next/image';
 
 export function About() {
@@ -12,8 +12,7 @@ export function About() {
           <div className="text-center lg:text-left">
             <h2 className="text-4xl font-bold mb-8 text-[#191F25]">Quem sou eu?</h2>
             <p className="text-lg text-[#5b5d62] mb-6 leading-relaxed">
-              Olá me chamo Manoel Ferreira Matos, sou especialista em desenvolvimento de sistema e análise de sistemas. Gosto muito de motos clássicas e jogar.
-              <br />
+              Sou um desenvolvedor full-stack com uma base sólida em modelagem de banco de dados e experiência prática com ferramentas modernas do ecossistema web.
             </p>
             <a href="https://github.com/ManelFer">
               <button className="inline-flex items-center px-6 py-3 bg-[#191F25] text-[#f0e9e6] rounded-md hover:bg-[#272E36] transition-colors">
