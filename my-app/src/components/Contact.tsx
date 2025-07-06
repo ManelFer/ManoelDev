@@ -1,7 +1,27 @@
-import React from 'react';
+"use client";
+import React, { useRef, useState } from 'react';
+import emailjs from "emailjs-com"
 import { Phone, MapPin, Linkedin } from './icons';
 
+
 export function Contact() {
+  const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    emailjs.sendForm('service_01x764k', 'template_qcgw8b9', form.current, 'ljyClJDk0R-fRV7rx').then(() => {
+      setStatus("Mensagem enviada com sucesso!");
+      form.current?.reset();
+    }, (error) => {
+      setStatus("Ocorreu um erro ao enviar a mensagem.");
+      console.error(error.text);
+    });
+  }
+
   return (
     <section id="contato" className="py-20 bg-[#191F25] text-[#f0e9e6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,10 +46,11 @@ export function Contact() {
 
           <div className="bg-[#272E36] p-8 rounded-lg">
             <h3 className="text-2xl font-bold mb-6">Envie uma mensagem</h3>
-            <form className="space-y-4">
+            <form className="space-y-4" ref={form} onSubmit={sendEmail}>
               <div>
                 <input
                   type="text"
+                  name='name'
                   placeholder="Seu nome"
                   className="w-full px-4 py-3 bg-[#191F25] border border-[#5b5d62] rounded-md focus:outline-none focus:border-[#B1b2b9] text-[#f0e9e6]"
                 />
@@ -37,12 +58,14 @@ export function Contact() {
               <div>
                 <input
                   type="email"
+                  name='email'
                   placeholder="Seu email"
                   className="w-full px-4 py-3 bg-[#191F25] border border-[#5b5d62] rounded-md focus:outline-none focus:border-[#B1b2b9] text-[#f0e9e6]"
                 />
               </div>
               <div>
                 <textarea
+                  name='message'
                   rows={5}
                   placeholder="Sua mensagem"
                   className="w-full px-4 py-3 bg-[#191F25] border border-[#5b5d62] rounded-md focus:outline-none focus:border-[#B1b2b9] text-[#f0e9e6] resize-none"
@@ -54,6 +77,7 @@ export function Contact() {
               >
                 Enviar mensagem
               </button>
+              {status && <p className="text-green-500 mt-4">{status}</p>}
             </form>
           </div>
         </div>

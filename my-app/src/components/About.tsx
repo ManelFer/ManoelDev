@@ -2,6 +2,7 @@ import React from 'react';
 // Update the import path below to the correct location of your icon components.
 // For example, if your icons are in 'src/components/icons', use './icons' instead of '../icons'.
 import { Code, ArrowRight } from './icons';
+import Image from 'next/image';
 
 export function About() {
   return (
@@ -22,12 +23,22 @@ export function About() {
             </a>
           </div>
           <div className="flex justify-center">
-            <div className="w-80 h-80 bg-[#B1b2b9] rounded-full flex items-center justify-center shadow-2xl">
-              <div className="w-72 h-72 bg-[#9095a1] rounded-full flex items-center justify-center">
-                <Code size={80} className="text-[#f0e9e6]" />
+            <div className="relative w-80 h-80">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#B1b2b9] to-[#9095a1] rounded-full shadow-2xl" />
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-white shadow-xl transition-transform duration-300 hover:scale-105">
+                  <Image
+                    src="/perfil.jpeg"
+                    alt="Perfil"
+                    width={288} // 72 * 4
+                    height={288}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
