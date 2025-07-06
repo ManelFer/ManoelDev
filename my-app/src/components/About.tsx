@@ -1,7 +1,7 @@
 import React from 'react';
 // Update the import path below to the correct location of your icon components.
 // For example, if your icons are in 'src/components/icons', use './icons' instead of '../icons'.
-import { Code, ArrowRight } from './icons';
+import {ArrowRight } from './icons';
 import Image from 'next/image';
 
 export function About() {

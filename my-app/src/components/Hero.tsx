@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import foto1 from '../../public/bg_home.jpeg';
 import { ArrowRight } from './icons';
 import { Button } from './ui/Button';
 
